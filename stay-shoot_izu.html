@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宿泊付きフォトウェディング｜アンシャンテ伊豆 × 桐のかほり咲楽</title>
+<meta name="description" content="伊豆の絶景でのロケーションフォトウェディングと、オーシャンビューの露天風呂付き客室での宿泊がセットに。撮影の感動を、温泉と夕食でまだ続ける——アンシャンテ伊豆 × 桐のかほり咲楽の宿泊付きフォトウェディングプラン。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white: #faf9f6;
+    --offwhite: #f5f0ea;
+    --sakura: #f0c4c4;
+    --sakura-light: #fbe8e8;
+    --sakura-mid: #e8a0a0;
+    --green-deep: #2d4a35;
+    --green-mid: #3d6045;
+    --green-light: #e8f0e9;
+    --gold: #b8935a;
+    --gold-light: #d4af7a;
+    --text-dark: #2a2218;
+    --text-mid: #5a4e40;
+    --text-light: #8a7a6a;
+    --border: #e0d5c5;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    line-height: 1.8;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
+  }
+
+  img { display: block; }
+
+  /* ===== NAV ===== */
+  #nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.4s, box-shadow 0.4s;
+  }
+
+  #nav.scrolled {
+    background: rgba(250, 249, 246, 0.97);
+    box-shadow: 0 1px 20px rgba(0,0,0,0.08);
+    backdrop-filter: blur(8px);
+  }
+
+  .nav-logo {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    color: var(--white);
+    letter-spacing: 0.08em;
+    transition: color 0.4s;
+    text-decoration: none;
+  }
+
+  #nav.scrolled .nav-logo { color: var(--green-deep); }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  #nav.scrolled .nav-links a { color: var(--text-mid); }
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 2px;
+    font-size: 11px !important;
+    letter-spacing: 0.12em;
+    transition: background 0.3s !important;
+  }
+
+  .nav-cta:hover { background: var(--green-deep) !important; color: #fff !important; }
+
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    transition: background 0.4s;
+  }
+
+  #nav.scrolled .nav-hamburger span { background: var(--green-deep); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(250, 249, 246, 0.98);
+    padding: 24px;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { color: var(--text-dark); text-decoration: none; font-size: 14px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+
+  /* ===== HERO ===== */
+  #hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.05);
+    transition: transform 8s ease-out;
+  }
+
+  .hero-bg.loaded { transform: scale(1); }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(30,40,30,0.40) 0%,
+      rgba(20,30,20,0.50) 50%,
+      rgba(30,40,30,0.68) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 24px;
+    max-width: 760px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold-light);
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(23px, 5vw, 52px);
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.35);
+  }
+
+  .hero-subcopy {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(16px, 2.6vw, 22px);
+    color: #fff;
+    letter-spacing: 0.12em;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    text-shadow: 0 1px 14px rgba(0,0,0,0.35);
+  }
+
+  .hero-sub {
+    font-size: clamp(13px, 2vw, 16px);
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.06em;
+    margin-bottom: 44px;
+    line-height: 2;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.3);
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    padding: 18px 48px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid var(--gold);
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background: var(--green-deep);
+    border-color: var(--green-deep);
+    color: #fff;
+  }
+
+  .btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: var(--green-deep);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    padding: 16px 40px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid var(--green-deep);
+    cursor: pointer;
+  }
+
+  .btn-outline:hover {
+    background: var(--green-deep);
+    color: #fff;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.6);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: bounce 2s infinite;
+  }
+
+  .hero-scroll::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 40px;
+    background: rgba(255,255,255,0.4);
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* ===== SECTIONS COMMON ===== */
+  section { padding: 96px 24px; }
+
+  .section-inner {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .section-inner.wide { max-width: 1100px; }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: clamp(22px, 4vw, 36px);
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: var(--green-deep);
+    letter-spacing: 0.05em;
+  }
+
+  .section-lead {
+    text-align: center;
+    color: var(--text-mid);
+    font-size: 14px;
+    line-height: 2;
+    max-width: 600px;
+    margin: 0 auto 64px;
+    letter-spacing: 0.05em;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 20px auto;
+  }
+
+  /* ===== FADE IN ===== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-delay-1 { transition-delay: 0.1s; }
+  .fade-in-delay-2 { transition-delay: 0.2s; }
+  .fade-in-delay-3 { transition-delay: 0.3s; }
+  .fade-in-delay-4 { transition-delay: 0.4s; }
+
+  /* ===== REASONS ===== */
+  #reasons { background: var(--offwhite); }
+
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .reason-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 40px 28px;
+    border-radius: 2px;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  .reason-card:hover {
+    box-shadow: 0 12px 40px rgba(45,74,53,0.10);
+    transform: translateY(-4px);
+  }
+
+  .reason-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .reason-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--sakura-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto 20px;
+  }
+
+  .reason-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    color: var(--green-deep);
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+  }
+
+  /* ===== TIMELINE (1日の流れ) ===== */
+  #flow { background: var(--white); }
+
+  .timeline-list {
+    position: relative;
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  .timeline-list::before {
+    content: '';
+    position: absolute;
+    left: 88px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .timeline-item:last-child { margin-bottom: 0; }
+
+  .timeline-time {
+    width: 64px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    text-align: right;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--green-deep);
+    flex-shrink: 0;
+    margin-top: 5px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 4px var(--green-deep);
+  }
+
+  .timeline-body { flex: 1; }
+
+  .timeline-event {
+    font-size: 15px;
+    color: var(--text-dark);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-bottom: 4px;
+  }
+
+  .timeline-note {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* ===== PLANS ===== */
+  #plans { background: var(--offwhite); }
+
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .plan-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plan-card.featured { border-color: var(--gold); }
+
+  .plan-card:hover {
+    box-shadow: 0 12px 40px rgba(45,74,53,0.12);
+    transform: translateY(-4px);
+  }
+
+  .plan-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .plan-body {
+    padding: 28px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .plan-badge {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    display: inline-block;
+    padding: 4px 10px;
+    margin-bottom: 16px;
+    align-self: flex-start;
+  }
+
+  .plan-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    color: var(--green-deep);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  .plan-price {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 26px;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+  }
+
+  .plan-price .yen { font-size: 15px; }
+  .plan-price .tax-ex { font-size: 13px; color: var(--text-light); }
+
+  .plan-price-note {
+    font-size: 11px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
+    line-height: 1.7;
+  }
+
+  .plan-includes-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .plan-includes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 24px;
+  }
+
+  .plan-includes li {
+    font-size: 12.5px;
+    color: var(--text-mid);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.6;
+  }
+
+  .plan-includes li::before {
+    content: '✓';
+    color: var(--gold);
+    flex-shrink: 0;
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  .plan-includes li.plus::before { content: '＋'; color: var(--sakura-mid); font-weight: 600; }
+
+  .plan-cta { margin-top: auto; }
+
+  .plan-cta .btn-primary { display: block; text-align: center; padding: 14px; font-size: 14px; }
+
+  /* ===== SPOTS ===== */
+  #spots { background: var(--white); }
+
+  .spots-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .spot-tile {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  .spot-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .spot-tile:hover img { transform: scale(1.08); }
+
+  .spot-tile::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(20,30,20,0.6) 0%, rgba(20,30,20,0) 55%);
+  }
+
+  .spot-label {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    z-index: 1;
+    color: #fff;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+  }
+
+  /* ===== RYOKAN ===== */
+  #ryokan {
+    background: var(--green-deep);
+    color: #fff;
+  }
+
+  #ryokan .section-title { color: #fff; }
+  #ryokan .section-label { color: var(--gold-light); }
+  #ryokan .divider { background: rgba(255,255,255,0.3); }
+
+  .ryokan-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .ryokan-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .ryokan-photos img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+
+  .ryokan-photos img:first-child {
+    grid-column: 1 / -1;
+    height: 220px;
+  }
+
+  .ryokan-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ryokan-feature {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .ryokan-feature .rf-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ryokan-feature .rf-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    padding-top: 6px;
+  }
+
+  .ryokan-feature .rf-text strong {
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  /* ===== CAMERA ===== */
+  #camera {
+    background: var(--sakura-light);
+    text-align: center;
+  }
+
+  .camera-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .camera-icon {
+    font-size: 44px;
+    margin-bottom: 20px;
+  }
+
+  .camera-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(22px, 4vw, 32px);
+    color: var(--green-deep);
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .camera-text {
+    font-size: 15px;
+    color: var(--text-mid);
+    line-height: 2.1;
+    letter-spacing: 0.04em;
+  }
+
+  .camera-tags {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+
+  .camera-tag {
+    background: #fff;
+    color: var(--green-deep);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    padding: 8px 18px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+  }
+
+  /* ===== STEPS ===== */
+  #steps { background: var(--offwhite); }
+
+  .steps-list {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .steps-list::before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 24px;
+    bottom: 24px;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .step-item {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  .step-item:last-child { margin-bottom: 0; }
+
+  .step-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--green-deep);
+    color: #fff;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 4px var(--offwhite);
+  }
+
+  .step-body {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 20px 24px;
+    flex: 1;
+  }
+
+  .step-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    color: var(--green-deep);
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+  }
+
+  .step-desc {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.8;
+  }
+
+  /* ===== FAQ ===== */
+  #faq { background: var(--white); }
+
+  .faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    background: #fff;
+  }
+
+  .faq-item:last-child { border-bottom: none; }
+
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .faq-q:hover { background: var(--offwhite); }
+
+  .faq-q-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--green-deep);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .faq-q-text {
+    flex: 1;
+    font-size: 14px;
+    color: var(--text-dark);
+    letter-spacing: 0.03em;
+    font-weight: 500;
+  }
+
+  .faq-chevron {
+    font-size: 10px;
+    color: var(--text-light);
+    transition: transform 0.3s;
+  }
+
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 24px 0 64px;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 240px;
+    padding: 0 24px 20px 64px;
+  }
+
+  .faq-a-text {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 2;
+    letter-spacing: 0.03em;
+  }
+
+  /* ===== VOICES ===== */
+  #voices { background: var(--offwhite); }
+
+  .voice-card {
+    background: #fff;
+    border-left: 3px solid var(--gold);
+    padding: 40px 44px;
+    border-radius: 0 2px 2px 0;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .voice-quote {
+    font-size: 15px;
+    line-height: 2.2;
+    color: var(--text-mid);
+    margin-bottom: 18px;
+    letter-spacing: 0.03em;
+  }
+
+  .voice-quote::before { content: '❝ '; color: var(--gold); }
+
+  .voice-attr {
+    font-size: 11px;
+    color: var(--text-light);
+    letter-spacing: 0.1em;
+  }
+
+  /* ===== CTA FOOTER ===== */
+  #cta-footer {
+    background: var(--green-deep);
+    color: #fff;
+    text-align: center;
+    padding: 96px 24px;
+  }
+
+  #cta-footer .section-label { color: var(--gold-light); }
+  #cta-footer .section-title { color: #fff; }
+  #cta-footer .divider { background: rgba(255,255,255,0.2); }
+
+  .cta-lead {
+    color: rgba(255,255,255,0.78);
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 44px;
+    letter-spacing: 0.05em;
+  }
+
+  .btn-white {
+    background: #fff;
+    color: var(--green-deep);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    padding: 20px 56px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid #fff;
+    display: inline-block;
+  }
+
+  .btn-white:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+  .cta-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 16px;
+    letter-spacing: 0.08em;
+  }
+
+  .tel-block { margin-top: 48px; }
+
+  .tel-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 6px;
+  }
+
+  .tel-number {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+  }
+
+  .tel-number:hover { color: var(--gold-light); }
+
+  .tel-hours {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 6px;
+    letter-spacing: 0.08em;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #1a2a1f;
+    padding: 48px 24px;
+    text-align: center;
+  }
+
+  .footer-logos {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-logo-item {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-sep { color: rgba(255,255,255,0.25); }
+
+  .footer-address {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.05em;
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.1em;
+  }
+
+  /* ===== STICKY CTA (SP) ===== */
+  .sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    padding: 12px 16px;
+    background: rgba(250,249,246,0.97);
+    box-shadow: 0 -2px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(8px);
+  }
+
+  .sticky-cta a {
+    display: block;
+    background: var(--gold);
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    border-radius: 2px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .spots-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    section { padding: 64px 20px; }
+
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+
+    .reasons-grid { grid-template-columns: 1fr; gap: 16px; }
+
+    .plans-grid { grid-template-columns: 1fr; }
+
+    .spots-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .ryokan-grid { grid-template-columns: 1fr; gap: 32px; }
+    .ryokan-photos img:first-child { height: 200px; }
+
+    .timeline-list::before { left: 84px; }
+
+    .sticky-cta { display: block; }
+    #cta-footer { padding-bottom: 120px; }
+
+    .voice-card { padding: 32px 28px; }
+
+    .btn-white { width: 100%; max-width: 360px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title { font-size: 28px; }
+    .timeline-time { width: 52px; font-size: 12px; }
+    .timeline-list::before { left: 70px; }
+    .timeline-item { gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">咲楽 × アンシャンテ伊豆</a>
+  <ul class="nav-links">
+    <li><a href="#reasons">選ばれる理由</a></li>
+    <li><a href="#flow">1日の流れ</a></li>
+    <li><a href="#plans">プラン</a></li>
+    <li><a href="#spots">ロケ地</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="https://booking.onosha-app.com/bridal_reservation/consultation/51" target="_blank" rel="noopener" class="nav-cta">無料相談</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#reasons" onclick="toggleMenu()">選ばれる理由</a>
+  <a href="#flow" onclick="toggleMenu()">1日の流れ</a>
+  <a href="#plans" onclick="toggleMenu()">プラン詳細</a>
+  <a href="#spots" onclick="toggleMenu()">ロケーション</a>
+  <a href="#ryokan" onclick="toggleMenu()">旅館の魅力</a>
+  <a href="#faq" onclick="toggleMenu()">よくある質問</a>
+  <a href="https://booking.onosha-app.com/bridal_reservation/consultation/51" target="_blank" rel="noopener" onclick="toggleMenu()" style="background:var(--gold);color:#fff;padding:14px 20px;text-align:center;margin-top:8px;border-bottom:none;border-radius:2px;">無料オンライン相談を予約する</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">IZU PHOTO WEDDING &amp; STAY</span>
+    <h1 class="hero-title">伊豆で叶える、<br>“旅行×フォトウェディング”</h1>
+    <p class="hero-subcopy">人生で一番贅沢な一泊二日へ。</p>
+    <p class="hero-sub">海・温泉・美食・絶景ロケーション。<br>撮影だけでは終わらない、おふたりだけの特別な旅をご提案します。</p>
+    <a href="https://booking.onosha-app.com/bridal_reservation/consultation/51" target="_blank" rel="noopener" class="btn-primary">無料オンライン相談を予約する</a>
+  </div>
+  <div class="hero-scroll">SCROLL</div>
+</section>
+
+<!-- ===== REASONS ===== -->
+<section id="reasons">
+  <div class="section-inner">
+    <span class="section-label fade-in">WHY CHOSEN</span>
+    <h2 class="section-title fade-in">このプランが<br>選ばれる理由</h2>
+    <div class="divider fade-in"></div>
+    <p class="section-lead fade-in">撮って終わりではなく、その日のままゆっくりと。<br>伊豆だからこそ叶う、撮影と旅がひとつになった一日です。</p>
+
+    <div class="reasons-grid">
+      <div class="reason-card fade-in fade-in-delay-1">
+        <span class="reason-num">REASON 01</span>
+        <div class="reason-icon">📸</div>
+        <p class="reason-title">撮影から宿泊まで1日で完結。<br>移動ゼロで最高の体験</p>
+      </div>
+      <div class="reason-card fade-in fade-in-delay-2">
+        <span class="reason-num">REASON 02</span>
+        <div class="reason-icon">♨️</div>
+        <p class="reason-title">全室オーシャンビューの<br>露天風呂付き客室で疲れを癒せる</p>
+      </div>
+      <div class="reason-card fade-in fade-in-delay-3">
+        <span class="reason-num">REASON 03</span>
+        <div class="reason-icon">🌿</div>
+        <p class="reason-title">1日1組・4室限定だから、<br>他のお客様を気にしなくていい</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOW (1日の流れ) ===== -->
+<section id="flow">
+  <div class="section-inner">
+    <span class="section-label fade-in">A DAY STORY</span>
+    <h2 class="section-title fade-in">1日の流れ</h2>
+    <div class="divider fade-in"></div>
+    <p class="section-lead fade-in">朝のお支度から、撮影、温泉、夕食まで。<br>慌ただしさのない、ふたりのためだけの一日。</p>
+
+    <div class="timeline-list fade-in">
+      <div class="timeline-item">
+        <div class="timeline-time">AM</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">ブライズルームでヘアメイク・お支度</div>
+          <div class="timeline-note">専用のブライズルームで、プロのヘアメイク・着付けを。ゆったりとした時間の中で当日の準備を整えます。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">AM〜PM</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">伊豆の絶景スポットでロケーション撮影（約1時間半）</div>
+          <div class="timeline-note">河津桜・海・岬など、伊豆の大自然全体がスタジオ。屋内スタジオにはない、その日だけの光と風景を切り取ります。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">PM</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">旅館チェックイン</div>
+          <div class="timeline-note">隣接する「桐のかほり咲楽」へ。移動の負担なく、そのまま特別な夜へと続きます。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">PM</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">客室の露天風呂でのんびりと疲れを癒す</div>
+          <div class="timeline-note">オーシャンビューの露天風呂付き客室で、撮影の余韻にひたりながら、おふたりだけの静かな時間を。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">夕方</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">伊豆厳選食材の夕食をご堪能</div>
+          <div class="timeline-note">地元の旬の食材にこだわったお料理で、記念日の夜を彩ります。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">翌朝</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">朝食後、チェックアウト</div>
+          <div class="timeline-note">波の音とともに迎える朝。2泊して伊豆観光を楽しむこともできます。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLANS ===== -->
+<section id="plans">
+  <div class="section-inner wide">
+    <span class="section-label fade-in">PLANS</span>
+    <h2 class="section-title fade-in">2つのプラン</h2>
+    <div class="divider fade-in"></div>
+    <p class="section-lead fade-in">おふたりだけで過ごす特別な一日か、ご家族みんなで旅館を貸切るか。<br>過ごし方に合わせてお選びいただけます。</p>
+
+    <div class="plans-grid">
+      <!-- PLAN A -->
+      <div class="plan-card fade-in fade-in-delay-1">
+        <img class="plan-img" src="images/plan-a.jpg" alt="PLAN A おふたりで特別な1日" loading="lazy">
+        <div class="plan-body">
+          <span class="plan-badge">PLAN A</span>
+          <h3 class="plan-title">おふたりで特別な1日</h3>
+          <div class="plan-price">231,000<span class="yen">円（税込）</span></div>
+          <div class="plan-price-note">210,000円（税抜）<br>※土日祝日は別途 33,000円（税込）</div>
+          <div class="plan-includes-label">含まれるもの</div>
+          <ul class="plan-includes">
+            <li>新郎・新婦衣装（ドレス or 和装）</li>
+            <li>写真データ全カット（150カット〜）</li>
+            <li>新婦ヘアメイク・新郎ヘアセット</li>
+            <li>小物代（ベール・アクセサリー等）</li>
+            <li>ブライズルーム使用料</li>
+            <li>ロケ地送迎</li>
+            <li>撮影時スタイリスト同行</li>
+            <li>着付け代</li>
+            <li>データ色調・明るさ軽度補正</li>
+            <li>桐のかほり咲楽 1泊（夕食・朝食付き）</li>
+          </ul>
+          <div class="plan-cta">
+            <a href="https://booking.onosha-app.com/bridal_reservation/consultation/51" target="_blank" rel="noopener" class="btn-primary">このプランを相談する</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLAN B -->
+      <div class="plan-card featured fade-in fade-in-delay-2">
+        <img class="plan-img" src="images/plan-b.jpg" alt="PLAN B 家族みんなで旅館貸切" loading="lazy">
+        <div class="plan-body">
+          <span class="plan-badge">PLAN B</span>
+          <h3 class="plan-title">家族みんなで旅館貸切</h3>
+          <div class="plan-price">473,000<span class="yen">円（税込）</span></div>
+          <div class="plan-price-note">430,000円（税抜）<br>※休前日・特定日の宿泊は ＋88,000円（税込）</div>
+          <div class="plan-includes-label">PLAN A の内容すべて ＋</div>
+          <ul class="plan-includes">
+            <li class="plus">桐のかほり咲楽 1泊（夕食・朝食付き・8名様まで）</li>
+          </ul>
+          <p style="font-size:12.5px;color:var(--text-mid);line-height:1.9;margin-bottom:24px;">
+            旅館を家族で貸し切って、撮影後もみんなでゆっくり。お子様やご両親と一緒に、特別な一日を分かち合えるプランです。
+          </p>
+          <div class="plan-cta">
+            <a href="https://booking.onosha-app.com/bridal_reservation/consultation/51" target="_blank" rel="noopener" class="btn-primary">このプランを相談する</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPOTS ===== -->
+<section id="spots">
+  <div class="section-inner wide">
+    <span class="section-label fade-in">LOCATION</span>
+    <h2 class="section-title fade-in">ロケーション撮影スポット</h2>
+    <div class="divider fade-in"></div>
+    <p class="section-lead fade-in">伊豆には、四季折々の絶景が広がります。<br>季節やご希望に合わせて、最高の一枚が撮れる場所へご案内します。</p>
+
+    <div class="spots-grid fade-in">
+      <div class="spot-tile">
+        <img src="images/spot-kawazuzakura.jpg" alt="河津桜" loading="lazy">
+        <span class="spot-label">河津桜</span>
+      </div>
+      <div class="spot-tile">
+        <img src="images/spot-sakura.jpg" alt="桜" loading="lazy">
+        <span class="spot-label">桜</span>
+      </div>
+      <div class="spot-tile">
+        <img src="images/spot-umi.jpg" alt="海" loading="lazy">
+        <span class="spot-label">海</span>
+      </div>
+      <div class="spot-tile">
+        <img src="images/spot-misaki.jpg" alt="岬" loading="lazy">
+        <span class="spot-label">岬</span>
+      </div>
+      <div class="spot-tile">
+        <img src="images/spot-perryroad.jpg" alt="ペリーロード" loading="lazy">
+        <span class="spot-label">ペリーロード</span>
+      </div>
+      <div class="spot-tile">
+        <img src="images/spot-jinja.jpg" alt="神社" loading="lazy">
+        <span class="spot-label">神社</span>
+      </div>
+      <div class="spot-tile">
+        <img src="images/spot-hosono.jpg" alt="稲取細野高原" loading="lazy">
+        <span class="spot-label">稲取細野高原</span>
+      </div>
+      <div class="spot-tile">
+        <img src="images/spot-nanohana.jpg" alt="菜の花" loading="lazy">
+        <span class="spot-label">菜の花</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RYOKAN ===== -->
+<section id="ryokan">
+  <div class="section-inner wide">
+    <span class="section-label fade-in">RYOKAN SAKURA</span>
+    <h2 class="section-title fade-in">旅館「桐のかほり咲楽」の魅力</h2>
+    <div class="divider fade-in"></div>
+    <p class="section-lead fade-in" style="color:rgba(255,255,255,0.75);">伊豆今井浜温泉。全4室だけの、波の音に包まれる隠れ宿。</p>
+
+    <div class="ryokan-grid">
+      <div class="ryokan-photos fade-in">
+        <img src="images/ryokan-room.jpg" alt="和モダンな客室" loading="lazy">
+        <img src="images/ryokan-onsen.jpg" alt="露天風呂" loading="lazy">
+        <img src="images/ryokan-ryori.jpg" alt="地元食材の料理" loading="lazy">
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <ul class="ryokan-features">
+          <li class="ryokan-feature">
+            <span class="rf-icon">🌊</span>
+            <span class="rf-text"><strong>全4室・全室オーシャンビューの露天風呂付き</strong><br>どのお部屋からも海を望み、客室でいつでも温泉を楽しめます。</span>
+          </li>
+          <li class="ryokan-feature">
+            <span class="rf-icon">🏮</span>
+            <span class="rf-text"><strong>和モダンな空間</strong><br>伝統の趣と現代の心地よさが調和した、落ち着きのあるしつらえ。</span>
+          </li>
+          <li class="ryokan-feature">
+            <span class="rf-icon">🍽️</span>
+            <span class="rf-text"><strong>地元食材にこだわった料理</strong><br>伊豆の海と山の旬を、丁寧に仕立てた特別な食卓で。</span>
+          </li>
+          <li class="ryokan-feature">
+            <span class="rf-icon">🌙</span>
+            <span class="rf-text"><strong>窓から聞こえる波の音</strong><br>日常を忘れさせてくれる、静かで贅沢な時間が流れます。</span>
+          </li>
+          <li class="ryokan-feature">
+            <span class="rf-icon">💗</span>
+            <span class="rf-text"><strong>リピーター多数の隠れ宿</strong><br>1日最大4組限定。完全プライベートな滞在が叶います。</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAMERA ===== -->
+<section id="camera">
+  <div class="camera-inner">
+    <div class="camera-icon fade-in">📷</div>
+    <h2 class="camera-title fade-in">カメラ持ち込みOK！</h2>
+    <div class="divider fade-in"></div>
+    <p class="camera-text fade-in">
+      アンシャンテ伊豆では、ご自身のカメラ・スマホの持ち込みが可能。<br>
+      ご家族や友人も一緒に、撮影そのものを楽しめます。<br>
+      プロの撮影とあわせて、思い思いの一枚を残してください。
+    </p>
+    <div class="camera-tags fade-in fade-in-delay-1">
+      <span class="camera-tag">📹 ビデオOK</span>
+      <span class="camera-tag">📸 デジカメOK</span>
+      <span class="camera-tag">📱 スマホOK</span>
+      <span class="camera-tag">👨‍👩‍👧 ご家族も一緒に</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STEPS ===== -->
+<section id="steps">
+  <div class="section-inner">
+    <span class="section-label fade-in">FLOW TO THE DAY</span>
+    <h2 class="section-title fade-in">ご来館から撮影日までの流れ</h2>
+    <div class="divider fade-in"></div>
+    <p class="section-lead fade-in">全国どこからでもOK。まずはオンライン相談から、一歩ずつご一緒に。</p>
+
+    <div class="steps-list fade-in">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">オンライン相談・お申し込み</div>
+          <div class="step-desc">プラン説明・日程調整をオンラインで。お申し込み金20,000円をお支払いいただき、ご予約確定となります。</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">衣装試着（希望者のみ）</div>
+          <div class="step-desc">ご希望の方は衣装の試着を。遠方の場合は姉妹店での対応も可能です。</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">撮影当日：来館・お支度・ロケーション撮影</div>
+          <div class="step-desc">ご来館後、ブライズルームでお支度。伊豆の絶景スポットでロケーション撮影（約1時間半）を行います。</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-title">撮影後：写真選び</div>
+          <div class="step-desc">撮影した中から、お気に入りの一枚一枚をお選びいただけます。</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-title">旅館チェックイン：温泉・夕食・宿泊</div>
+          <div class="step-desc">隣接する咲楽へ。露天風呂と夕食で、撮影の感動をそのまま特別な夜へとつなぎます。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="section-inner">
+    <span class="section-label fade-in">FAQ</span>
+    <h2 class="section-title fade-in">よくある質問</h2>
+    <div class="divider fade-in"></div>
+    <br><br>
+
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <div class="faq-q-icon">Q</div>
+          <div class="faq-q-text">2泊できますか？</div>
+          <div class="faq-chevron">▼</div>
+        </button>
+        <div class="faq-a">
+          <p class="faq-a-text">はい、可能です。撮影以外に伊豆観光もお楽しみいただけます。スタッフがオススメのスポットをご案内します。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <div class="faq-q-icon">Q</div>
+          <div class="faq-q-text">食材の苦手なものは対応できますか？</div>
+          <div class="faq-chevron">▼</div>
+        </button>
+        <div class="faq-a">
+          <p class="faq-a-text">可能です。調理法や品を変えてご用意いたします。事前にお知らせください。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <div class="faq-q-icon">Q</div>
+          <div class="faq-q-text">家族も一緒に泊まれますか？</div>
+          <div class="faq-chevron">▼</div>
+        </button>
+        <div class="faq-a">
+          <p class="faq-a-text">PLAN Bで9名様まで対応しています。ご家族みんなで旅館を貸し切ってお過ごしいただけます。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <div class="faq-q-icon">Q</div>
+          <div class="faq-q-text">カメラの持ち込みはできますか？</div>
+          <div class="faq-chevron">▼</div>
+        </button>
+        <div class="faq-a">
+          <p class="faq-a-text">はい、ビデオ・デジカメ・スマホすべてOKです。ご家族やご友人も一緒に撮影をお楽しみいただけます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VOICES ===== -->
+<section id="voices">
+  <div class="section-inner">
+    <span class="section-label fade-in">VOICE</span>
+    <h2 class="section-title fade-in">お客様の声</h2>
+    <div class="divider fade-in"></div>
+    <br><br>
+
+    <div class="voice-card fade-in">
+      <p class="voice-quote">撮影後は旅館に宿泊し、美味しいお料理と温泉につかって疲れを癒すことができました。撮影や宿泊の時間が本当に特別な思い出になりました。</p>
+      <p class="voice-attr">宿泊付きフォトウェディングをご利用のお客様より</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FOOTER ===== -->
+<section id="cta-footer">
+  <div class="section-inner">
+    <span class="section-label fade-in">CONTACT</span>
+    <h2 class="section-title fade-in">まずは無料オンライン相談から。</h2>
+    <div class="divider fade-in"></div>
+    <p class="cta-lead fade-in">
+      全国どこからでもOK。<br>
+      プランの詳細・日程・費用感など、何でもお気軽にご相談ください。
+    </p>
+
+    <div class="fade-in">
+      <a href="https://booking.onosha-app.com/bridal_reservation/consultation/51" target="_blank" rel="noopener" class="btn-white">無料オンライン相談を予約する</a>
+      <p class="cta-note">オンライン相談（Zoom等）も承っております</p>
+    </div>
+
+    <div class="tel-block fade-in">
+      <div class="tel-label">アンシャンテ伊豆</div>
+      <a href="tel:0558340051" class="tel-number">0558-34-0051</a>
+      <div class="tel-hours">営業時間 10:00〜19:00（水・木定休／祝日は営業）</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logos">
+    <span class="footer-logo-item">アンシャンテ伊豆</span>
+    <span class="footer-sep">×</span>
+    <span class="footer-logo-item">桐のかほり咲楽</span>
+  </div>
+  <p class="footer-address">
+    静岡県賀茂郡河津町見高182-35　／　TEL 0558-34-0051<br>
+    営業時間 10:00〜19:00（毎週水曜・木曜定休／祝日は営業）
+  </p>
+  <p class="footer-copy">© 2026 アンシャンテ伊豆 × 桐のかほり咲楽 All rights reserved.</p>
+</footer>
+
+<!-- ===== STICKY CTA (SP) ===== -->
+<div class="sticky-cta">
+  <a href="https://booking.onosha-app.com/bridal_reservation/consultation/51" target="_blank" rel="noopener">無料オンライン相談を予約する →</a>
+</div>
+
+<script>
+  // ===== NAV scroll =====
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 80);
+  });
+
+  // ===== Hero BG animation =====
+  const heroBg = document.getElementById('heroBg');
+  setTimeout(() => heroBg.classList.add('loaded'), 100);
+
+  // ===== Mobile menu =====
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // ===== FAQ accordion =====
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ===== Fade-in on scroll =====
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
